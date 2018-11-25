@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the NuevoLibroPage page.
@@ -14,12 +14,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'nuevo-libro.html',
 })
 export class NuevoLibroPage {
+titulo = "";
+autor = "";
+year= "";
+imagen = "";
+books = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public alertCtrl: AlertController) {
+      this.books = this.navParams.get('books');
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NuevoLibroPage');
+  }
+
+  agregarLibro() {
+    if (this.titulo.length > 0) {
+      this.books.push({titulo: this.titulo, autor: this.autor, year: this.year});
+      this.navCtrl.pop();
+    }
   }
 
 }

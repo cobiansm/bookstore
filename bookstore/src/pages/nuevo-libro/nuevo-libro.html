@@ -7,12 +7,25 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>nuevoLibro</ion-title>
+    <ion-title style='background-color: #FCF6BD'>Agregar Libro</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)] = 'titulo' placeholder = 'Titulo'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)] = 'autor' placeholder = 'Autor'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)] = 'year' placeholder = 'Año'></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <button ion-button block (click)='agregarLibro()'>Agregar</button>
 </ion-content>
