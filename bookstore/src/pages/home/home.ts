@@ -13,8 +13,8 @@ libro = VerLibroPage;
 newLibro = NuevoLibroPage;
 
 books = [
-  {titulo: 'El Gran Gatsby', autor: 'F. Scott Fitzgerald', year: '1952', imagen: '../assets/great.jpg'},
-  {titulo: 'For Whom the Bell Tolls', autor: 'Ernest Hemingway', year: '1940', imagen: '../assets/bells.jpg'}
+  {titulo: 'El Gran Gatsby', autor: 'F. Scott Fitzgerald', year: '1952', editorial: 'Aleph', imagen: '../assets/great.jpg'},
+  {titulo: 'For Whom the Bell Tolls', autor: 'Ernest Hemingway', year: '1940', editorial: 'Festschrift',imagen: '../assets/bells.jpg'}
 ]
 
   constructor(public navCtrl: NavController,
