@@ -14,8 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'ver-libro.html',
 })
 export class VerLibroPage {
+book = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  this.book= this.navParams.get('book');
   }
 
   ionViewDidLoad() {

@@ -31,8 +31,15 @@ books = [];
 
   agregarLibro() {
     if (this.titulo.length > 0) {
-      this.books.push({titulo: this.titulo, autor: this.autor, year: this.year});
+      this.books.push({titulo: this.titulo, autor: this.autor, year: this.year, imagen: '../assets/books.png'});
       this.navCtrl.pop();
+    } else {
+      const alert = this.alertCtrl.create ({
+        title: 'Error',
+        subTitle: 'Tu libro está incompleto',
+        buttons: ['Ok']
+      });
+      alert.present();
     }
   }
 

@@ -7,12 +7,22 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>verLibro</ion-title>
+    <ion-title style='background-color: #A9DEF9'>{{book.titulo}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding style='background-color: #A9DEF9'>
+<ion-card>
+  <img [src] = book.imagen>
+<ion-list>
+  <ion-item>
+    {{book.autor}}
+  </ion-item>
+  <ion-item>
+    {{book.year}}
+  </ion-item>
+</ion-list>
+</ion-card>
 </ion-content>
